@@ -30,7 +30,7 @@ export default {
 
       const response = await fetch(wpEndpoint.toString(), {
         headers: {
-          Authorization: `Basic ${env.WP_AUTH_TOKEN}`,
+          Authorization: env.WP_AUTH_TOKEN,
         },
       });
       
@@ -50,7 +50,7 @@ export default {
 
       const response = await fetch(wcEndpoint.toString(), {
         headers: {
-          Authorization: `Basic ${env.WC_AUTH_TOKEN}`,
+          Authorization: env.WC_AUTH_TOKEN,
         },
       });
       
