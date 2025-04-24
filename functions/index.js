@@ -1,5 +1,5 @@
 export default {
-  async fetch(request) {
+  async fetch(request, env) {
     const url = new URL(request.url);
     const headers = {
       'Content-Type': 'application/json',
@@ -30,7 +30,7 @@ export default {
 
       const response = await fetch(wpEndpoint.toString(), {
         headers: {
-          Authorization: 'Basic Ymlnc2Nvb3RzOjIxNHUgRm5GUiBRUjBlIGxXYm4gUnVOMSBoVmFR',
+          Authorization: `Basic ${env.WP_AUTH_TOKEN}`,
         },
       });
       
@@ -50,7 +50,7 @@ export default {
 
       const response = await fetch(wcEndpoint.toString(), {
         headers: {
-          Authorization: 'Basic Y2tfZDlkNjA2ZGEzZTM0MjdhY2E1MGFiMmVhNzc1NDY2OTFiODJjMzBiZjpjc18yMDE4M2E2M2U3MzJkYmU1MjFjNjY0OWUxNTlhOGU5ZGY0OWY3Y2Q2',
+          Authorization: `Basic ${env.WC_AUTH_TOKEN}`,
         },
       });
       
