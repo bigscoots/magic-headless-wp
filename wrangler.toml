@@ -1,0 +1,12 @@
+name = "magic-headless-wp"
+compatibility_date = "2025-04-22"
+
+[build]
+command = "npm run build"
+output_dir = "dist"
+
+[site]
+bucket = "./dist"
+
+[dev]
+port = 8788
