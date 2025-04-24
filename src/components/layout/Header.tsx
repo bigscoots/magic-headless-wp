@@ -3,7 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { 
   Sun, 
   Moon, 
-  Search, 
   ShoppingCart, 
   Menu, 
   X, 
@@ -17,8 +16,6 @@ const Header: React.FC = () => {
   const { totalItems } = useCart();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
   const location = useLocation();
 
   // Update navbar appearance on scroll
@@ -36,15 +33,7 @@ const Header: React.FC = () => {
   // Close mobile menu on navigation
   useEffect(() => {
     setIsMobileMenuOpen(false);
-    setIsSearchOpen(false);
   }, [location.pathname]);
-
-  const handleSearchSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Implement search functionality
-    console.log('Search for:', searchQuery);
-    setIsSearchOpen(false);
-  };
 
   return (
     <header 
@@ -112,14 +101,6 @@ const Header: React.FC = () => {
           {/* Action Buttons */}
           <div className="flex items-center space-x-4">
             <button 
-              onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className="p-2 text-neutral-600 hover:text-primary-600 dark:text-neutral-300 dark:hover:text-primary-400 transition-colors"
-              aria-label="Search"
-            >
-              <Search size={20} />
-            </button>
-            
-            <button 
               onClick={toggleTheme}
               className="p-2 text-neutral-600 hover:text-primary-600 dark:text-neutral-300 dark:hover:text-primary-400 transition-colors"
               aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
@@ -150,29 +131,6 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
-
-      {/* Search Bar */}
-      {isSearchOpen && (
-        <div className="absolute inset-x-0 top-full bg-white dark:bg-neutral-900 shadow-md py-4 animate-slide-down">
-          <div className="container mx-auto px-4">
-            <form onSubmit={handleSearchSubmit} className="relative">
-              <input
-                type="text"
-                placeholder="Search for articles and products..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full py-2 px-4 pr-10 rounded-md border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-primary-500"
-              />
-              <button 
-                type="submit"
-                className="absolute inset-y-0 right-0 flex items-center px-3 text-neutral-500 dark:text-neutral-400"
-              >
-                <Search size={18} />
-              </button>
-            </form>
-          </div>
-        </div>
-      )}
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
