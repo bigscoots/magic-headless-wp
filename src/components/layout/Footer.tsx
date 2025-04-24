@@ -2,14 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Laptop, 
-  Facebook, 
-  Twitter, 
-  Instagram, 
-  Linkedin, 
   Mail, 
   Phone, 
-  MapPin 
+  MapPin,
+  Github
 } from 'lucide-react';
+import Button from '../ui/Button';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -27,44 +25,19 @@ const Footer: React.FC = () => {
             <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed mb-4">
               A modern headless WordPress + WooCommerce solution that provides a seamless experience for content and e-commerce.
             </p>
-            <div className="flex space-x-4">
-              <a 
-                href="https://facebook.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-neutral-500 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400 transition-colors"
-                aria-label="Facebook"
+            <a 
+              href="https://github.com/bigscoots/magic-headless-wp"
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="outline"
+                size="sm"
+                leftIcon={<Github size={16} />}
               >
-                <Facebook size={18} />
-              </a>
-              <a 
-                href="https://twitter.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-neutral-500 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400 transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter size={18} />
-              </a>
-              <a 
-                href="https://instagram.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-neutral-500 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400 transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram size={18} />
-              </a>
-              <a 
-                href="https://linkedin.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-neutral-500 hover:text-primary-600 dark:text-neutral-400 dark:hover:text-primary-400 transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={18} />
-              </a>
-            </div>
+                View on GitHub
+              </Button>
+            </a>
           </div>
 
           {/* Quick Links */}
