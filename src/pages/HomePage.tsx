@@ -44,7 +44,7 @@ const HomePage: React.FC = () => {
               </Button>
             </div>
           </div>
-          <div className='bigscoots-logo opacity-75 hidden xl:block'>
+          <div className='bigscoots-logo opacity-75 hidden xl:flex xl:grow xl:items-center'>
             <img src={LogoSvg} alt="BigScoots Logo" className="bigscoots-logo" />
           </div>
         </div>
