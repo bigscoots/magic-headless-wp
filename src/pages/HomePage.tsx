@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, ShoppingBag, PenTool, Zap } from 'lucide-react';
 import { useLatestPosts } from '../hooks/useWordPressData';
 import { useProducts } from '../hooks/useWooCommerceData';
+import LogoSvg  from '../assets/images/bigscoots-vertical.svg';
 import PostCard from '../components/posts/PostCard';
 import ProductCard from '../components/products/ProductCard';
 import Button from '../components/ui/Button';
@@ -44,7 +45,7 @@ const HomePage: React.FC = () => {
             </div>
           </div>
           <div className='bigscoots-logo opacity-75'>
-            <img src="/assets/images/bigscoots-vertical.svg" alt="BigScoots Logo" className="bigscoots-logo" />
+            <img src={LogoSvg} alt="BigScoots Logo" className="bigscoots-logo" />
           </div>
         </div>
       </section>
