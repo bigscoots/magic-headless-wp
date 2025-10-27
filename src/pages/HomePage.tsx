@@ -17,7 +17,7 @@ const HomePage: React.FC = () => {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary-600 to-primary-900 dark:from-primary-800 dark:to-primary-950 text-white">
         <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-10"></div>
-        <div className="flex flex-wrap lg:gap-13 container mx-auto px-4 py-20 md:py-28 lg:py-32 relative">
+        <div className="flex flex-wrap xl:gap-9 container mx-auto px-4 py-20 md:py-28 lg:py-32 relative">
           <div className="max-w-3xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 leading-tight">
               Modern Headless WordPress + WooCommerce Solution
@@ -44,7 +44,7 @@ const HomePage: React.FC = () => {
               </Button>
             </div>
           </div>
-          <div className='bigscoots-logo opacity-75 hidden lg:block'>
+          <div className='bigscoots-logo opacity-75 hidden xl:block'>
             <img src={LogoSvg} alt="BigScoots Logo" className="bigscoots-logo" />
           </div>
         </div>
