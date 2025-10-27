@@ -51,7 +51,7 @@ const Header: React.FC = () => {
             className="flex items-center space-x-2 text-primary-600 dark:text-primary-400"
           >
             <Laptop size={28} strokeWidth={1.5} />
-            <span className="font-semibold text-xl hidden sm:block">Magic Headless WP</span>
+            <span className="font-semibold text-xl hidden sm:block">Headless WP by BigScoots</span>
           </Link>
 
           {/* Desktop Navigation */}
