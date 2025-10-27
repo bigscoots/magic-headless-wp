@@ -20,10 +20,10 @@ const Footer: React.FC = () => {
           <div>
             <div className="flex items-center space-x-2 text-primary-600 dark:text-primary-400 mb-4">
               <Laptop size={24} strokeWidth={1.5} />
-              <span className="font-semibold text-lg">Magic Headless WP</span>
+              <span className="font-semibold text-lg">Headless WP by BigScoots</span>
             </div>
             <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed mb-4">
-              A modern headless WordPress + WooCommerce solution that provides a seamless experience for content and e-commerce.
+              A modern headless WordPress + WooCommerce solution that provides a seamless experience for content and e-commerce. Made by BigScoots.
             </p>
             <a 
               href="https://github.com/bigscoots/magic-headless-wp"
@@ -170,7 +170,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-neutral-200 dark:border-neutral-800 pt-8">
           <div className="flex flex-col md:flex-row md:justify-between md:items-center space-y-4 md:space-y-0">
             <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-              &copy; {currentYear} Magic Headless WP. All rights reserved.
+              &copy; {currentYear} BigScoots. All rights reserved.
             </p>
             <div className="flex space-x-4">
               <Link 
